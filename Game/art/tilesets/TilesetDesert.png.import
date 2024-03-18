@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3t522p38lseq"
-path="res://.godot/imported/Settlement.png-ae10ec130057509f05b5c1d171dd3dec.ctex"
+uid="uid://c61oima320jid"
+path="res://.godot/imported/TilesetDesert.png-8d981f913654d9ea7945f9c0ec0e0a9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/tilesets/Settlement.png"
-dest_files=["res://.godot/imported/Settlement.png-ae10ec130057509f05b5c1d171dd3dec.ctex"]
+source_file="res://art/tilesets/TilesetDesert.png"
+dest_files=["res://.godot/imported/TilesetDesert.png-8d981f913654d9ea7945f9c0ec0e0a9f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj7vghj8gkdq1"
-path="res://.godot/imported/Forest Props.png-1f6e33dbceea30200839b200038d30c6.ctex"
+uid="uid://bfgqfkiwf88g6"
+path="res://.godot/imported/TilesetFloorB.png-995d27b40c5f015cb5e8368f3629cc2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/tilesets/Forest Props.png"
-dest_files=["res://.godot/imported/Forest Props.png-1f6e33dbceea30200839b200038d30c6.ctex"]
+source_file="res://art/tilesets/TilesetFloorB.png"
+dest_files=["res://.godot/imported/TilesetFloorB.png-995d27b40c5f015cb5e8368f3629cc2c.ctex"]
 
 [params]
 

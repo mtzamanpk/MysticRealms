@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dew44x5s2fsok"
-path="res://.godot/imported/Forest Structures.png-2fe6322e313a92bb145b4ae32bc34535.ctex"
+uid="uid://csovdjh7y8vdn"
+path="res://.godot/imported/Pipes.png-ee656e3241a057c2d2e5e6ef80cf72be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/tilesets/Forest Structures.png"
-dest_files=["res://.godot/imported/Forest Structures.png-2fe6322e313a92bb145b4ae32bc34535.ctex"]
+source_file="res://art/tilesets/Pipes.png"
+dest_files=["res://.godot/imported/Pipes.png-ee656e3241a057c2d2e5e6ef80cf72be.ctex"]
 
 [params]
 
