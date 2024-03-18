@@ -420,4 +420,4 @@ script = ExtResource("1_i6u0a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_mkxxj")
-animation = &"death"
+animation = &"sideWalk"
