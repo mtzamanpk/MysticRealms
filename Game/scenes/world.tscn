@@ -1061,10 +1061,12 @@ texture = ExtResource("3_6qti4")
 16:5/0 = 0
 16:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:5/0/physics_layer_0/angular_velocity = 0.0
+16:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(32.25, 41.5, -31.25, 40.5, -30.75, -15, 32.25, -14)
 0:0/size_in_atlas = Vector2i(4, 3)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(32.25, 41.5, -31.25, 40.5, -30.75, -15, 32.25, -14)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utxgr"]
 texture = ExtResource("4_ybqss")
