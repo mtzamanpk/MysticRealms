@@ -3,11 +3,25 @@ extends CharacterBody2D
 const speed = 100
 var current_direction = "name"
 
+var enemyInAttackRange = false
+var enemyAttackCooldown = true
+var health = 200
+var playerAlive = true
+var attackInProgress = false
+
 func _ready():
 	$AnimatedSprite2D.play("frontIdle")
 
 func _physics_process(delta):
 	player_movement(delta)
+	enemyAttack()
+	attack()
+	
+	if health <= 0:
+		playerAlive = false #add end screen/respawn/menu 
+		health = 0
+		print("player has died")
+		self.queue_free()
 
 func player_movement(delta):
 	velocity = Vector2.ZERO
@@ -47,22 +61,73 @@ func play_animation(movement):
 		if movement == 1:
 			animation.play("sideWalk")
 		elif movement == 0:
-			animation.play("sideIdle")
+			if attackInProgress == false:
+				animation.play("sideIdle")
 	if direction == "left":
 		animation.flip_h = true
 		if movement == 1:
 			animation.play("sideWalk")
 		elif movement == 0:
-			animation.play("sideIdle")
+			if attackInProgress == false:
+				animation.play("sideIdle")
 	if direction == "down":
 		animation.flip_h = true
 		if movement == 1:
 			animation.play("frontWalk")
 		elif movement == 0:
-			animation.play("frontIdle")
+			if attackInProgress == false:
+				animation.play("frontIdle")
 	if direction == "up":
 		animation.flip_h = true
 		if movement == 1:
 			animation.play("backWalk")
 		elif movement == 0:
-			animation.play("backIdle")
+			if attackInProgress == false:
+				animation.play("backIdle")
+
+func player():
+	pass
+
+func _on_player_hitbox_body_entered(body):
+	if body.has_method("enemy"):
+		enemyInAttackRange = true
+
+func _on_player_hitbox_body_exited(body):
+	if body.has_method("enemy"):
+		enemyInAttackRange = false
+
+func enemyAttack():
+	if enemyInAttackRange and enemyAttackCooldown == true:
+		health = health -20
+		enemyAttackCooldown = false
+		$attackCooldown.start()
+		print(health)
+
+func _on_attack_cooldown_timeout():
+	enemyAttackCooldown = true
+
+func attack():
+	var direction = current_direction
+	if Input.is_action_just_pressed("attack"):
+		global.playerCurrentAttack = true
+		attackInProgress = true
+		if direction == "right":
+			$AnimatedSprite2D.flip_h = false
+			$AnimatedSprite2D.play("sideAttack")
+			$attackTimer.start()
+		if direction == "left":
+			$AnimatedSprite2D.flip_h = true
+			$AnimatedSprite2D.play("sideAttack")
+			$attackTimer.start()
+		if direction == "down":
+			$AnimatedSprite2D.play("frontAttack")
+			$attackTimer.start()
+		if direction == "up":
+			$AnimatedSprite2D.play("backAttack")
+			$attackTimer.start()
+
+
+func _on_attack_timer_timeout():
+	$attackTimer.stop()
+	global.playerCurrentAttack = false
+	attackInProgress = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://b2fajicolu3r7"]
+[gd_scene load_steps=38 format=3 uid="uid://b2fajicolu3r7"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_apt3a"]
 [ext_resource type="Texture2D" uid="uid://cg2c5rdjr3vwp" path="res://art/Torch_Blue.png" id="2_mffeg"]
@@ -254,6 +254,9 @@ radius = 48.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_0ap4l"]
 radius = 5.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_d3r8y"]
+radius = 16.0
+
 [node name="enemy" type="CharacterBody2D"]
 y_sort_enabled = true
 script = ExtResource("1_apt3a")
@@ -277,5 +280,16 @@ y_sort_enabled = true
 position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_0ap4l")
 
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CircleShape2D_d3r8y")
+
+[node name="recieveDamageCooldown" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="body_entered" from="detectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="hitbox" to="." method="_on_hitbox_body_exited"]
+[connection signal="timeout" from="recieveDamageCooldown" to="." method="_on_recieve_damage_cooldown_timeout"]
