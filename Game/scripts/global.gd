@@ -6,11 +6,11 @@ var playerCurrentAttack = false
 var currentScene = "world"
 var transitionScene = false
 
-var playerExitDesertPosX = -205
-var playerExitDesertPosY = -67
+var playerExitDesertPosX = -198
+var playerExitDesertPosY = -74
 
-var playerStartPosX = -146
-var playerStartPosY = 20
+var playerStartPosX = -135
+var playerStartPosY = 23
 
 var gameFirstLoadIn = true
 

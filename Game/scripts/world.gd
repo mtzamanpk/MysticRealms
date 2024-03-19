@@ -3,10 +3,10 @@ extends Node2D
 func _ready():
 	if global.gameFirstLoadIn == true:
 		$player.position.x = global.playerStartPosX
-		$player.position.x = global.playerStartPosY
+		$player.position.y = global.playerStartPosY
 	else:
 		$player.position.x = global.playerExitDesertPosX
-		$player.position.x = global.playerExitDesertPosY
+		$player.position.y = global.playerExitDesertPosY
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

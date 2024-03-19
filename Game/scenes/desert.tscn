@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://ff6kx3tj4na8"]
 
+[ext_resource type="Script" path="res://scripts/desert.gd" id="1_7k1nr"]
 [ext_resource type="Texture2D" uid="uid://c61oima320jid" path="res://art/tilesets/TilesetDesert.png" id="1_c53ei"]
-[ext_resource type="Script" path="res://scenes/desert.gd" id="1_tyc54"]
 [ext_resource type="Texture2D" uid="uid://bcd4xy17wrgdo" path="res://art/tilesets/TilesetField.png" id="2_mgcfx"]
 [ext_resource type="Texture2D" uid="uid://dlseqfnjumspt" path="res://art/tilesets/TilesetFloor.png" id="3_pli1w"]
 [ext_resource type="Texture2D" uid="uid://bar6qfjyx5vrj" path="res://art/tilesets/TilesetHouse.png" id="4_hmrpy"]
@@ -4515,7 +4515,7 @@ size = Vector2(50, 32)
 
 [node name="desert" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_tyc54")
+script = ExtResource("1_7k1nr")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -4547,9 +4547,6 @@ position = Vector2(-164, 119)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-139, 2)
 polygon = PackedVector2Array(-109, -106, 368, -107, 369, 124, -2, 126, -2, 155, -43, 155, -44, 126, -126, 124, -126, -106, -117, -106, -117, -162, -157, -162, -157, 182, 427, 182, 427, -162, -109, -162)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(292, 3)
 
 [node name="desertExit" type="Area2D" parent="."]
 
