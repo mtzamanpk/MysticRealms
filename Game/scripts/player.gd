@@ -131,3 +131,12 @@ func _on_attack_timer_timeout():
 	$attackTimer.stop()
 	global.playerCurrentAttack = false
 	attackInProgress = false
+
+
+func currentCamera():
+	if global.currentScene == "world":
+		$worldCamera2D.enabled = true
+		$desertCamera2D.enabled = false
+	elif global.currentScene == "desert":
+		$worldCamera2D.enabled = false
+		$desertCamera2D.enabled = true
