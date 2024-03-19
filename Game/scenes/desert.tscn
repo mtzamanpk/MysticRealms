@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://ff6kx3tj4na8"]
+[gd_scene load_steps=15 format=3 uid="uid://ff6kx3tj4na8"]
 
 [ext_resource type="Texture2D" uid="uid://c61oima320jid" path="res://art/tilesets/TilesetDesert.png" id="1_c53ei"]
+[ext_resource type="Script" path="res://scenes/desert.gd" id="1_tyc54"]
 [ext_resource type="Texture2D" uid="uid://bcd4xy17wrgdo" path="res://art/tilesets/TilesetField.png" id="2_mgcfx"]
 [ext_resource type="Texture2D" uid="uid://dlseqfnjumspt" path="res://art/tilesets/TilesetFloor.png" id="3_pli1w"]
 [ext_resource type="Texture2D" uid="uid://bar6qfjyx5vrj" path="res://art/tilesets/TilesetHouse.png" id="4_hmrpy"]
@@ -3662,54 +3663,65 @@ texture = ExtResource("4_hmrpy")
 31:22/0/physics_layer_0/angular_velocity = 0.0
 0:0/size_in_atlas = Vector2i(4, 3)
 0:0/0 = 0
+0:0/0/y_sort_origin = 7
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-31.2895, 6.01041, 30.2288, 5.3033, 29.5217, 23.6881, -31.643, 24.3952)
 4:0/size_in_atlas = Vector2i(4, 3)
 4:0/0 = 0
+4:0/0/y_sort_origin = 7
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:0/0/physics_layer_0/angular_velocity = 0.0
 4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-31.2895, 6.01041, 30.2288, 5.3033, 29.5217, 23.6881, -31.643, 24.3952)
 8:0/size_in_atlas = Vector2i(4, 3)
 8:0/0 = 0
+8:0/0/y_sort_origin = 7
 8:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:0/0/physics_layer_0/angular_velocity = 0.0
 8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-31.2895, 6.01041, 30.2288, 5.3033, 29.5217, 23.6881, -31.643, 24.3952)
 12:0/size_in_atlas = Vector2i(4, 3)
 12:0/0 = 0
+12:0/0/y_sort_origin = 7
 12:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 12:0/0/physics_layer_0/angular_velocity = 0.0
 12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.0971, 2.12132, 21.7435, 1.41421, 22.8042, 23.6881, -22.4506, 23.3345)
 16:0/size_in_atlas = Vector2i(3, 3)
 16:0/0 = 0
+16:0/0/y_sort_origin = 7
 16:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:0/0/physics_layer_0/angular_velocity = 0.0
 16:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.0971, 2.12132, 21.7435, 1.41421, 22.8042, 23.6881, -22.4506, 23.3345)
 19:0/size_in_atlas = Vector2i(4, 3)
 19:0/0 = 0
+19:0/0/y_sort_origin = 7
 19:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:0/0/physics_layer_0/angular_velocity = 0.0
 19:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-29.8753, 4.94975, 30.2288, 4.59619, 30.5824, 22.981, -29.8753, 23.6881)
 23:0/size_in_atlas = Vector2i(3, 3)
 23:0/0 = 0
+23:0/0/y_sort_origin = 7
 23:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 23:0/0/physics_layer_0/angular_velocity = 0.0
 23:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.0971, 2.12132, 21.7435, 1.41421, 22.8042, 23.6881, -22.4506, 23.3345)
 26:0/size_in_atlas = Vector2i(3, 3)
 26:0/0 = 0
+26:0/0/y_sort_origin = 7
 26:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 26:0/0/physics_layer_0/angular_velocity = 0.0
 26:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.0971, 2.12132, 21.7435, 1.41421, 22.8042, 23.6881, -22.4506, 23.3345)
 29:0/size_in_atlas = Vector2i(4, 4)
 29:0/0 = 0
+29:0/0/y_sort_origin = 7
 29:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 29:0/0/physics_layer_0/angular_velocity = 0.0
 25:7/size_in_atlas = Vector2i(4, 5)
 25:7/0 = 0
+25:7/0/y_sort_origin = 15
 25:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 25:7/0/physics_layer_0/angular_velocity = 0.0
 25:14/size_in_atlas = Vector2i(4, 5)
 25:14/0 = 0
+25:14/0/y_sort_origin = 15
 25:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 25:14/0/physics_layer_0/angular_velocity = 0.0
 
@@ -4502,6 +4514,8 @@ sources/4 = SubResource("TileSetAtlasSource_reypu")
 size = Vector2(50, 32)
 
 [node name="desert" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_tyc54")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -4525,20 +4539,23 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(720917, 15, 0, 655375, 262152, 0, 786449, 262152, 0, 720908, 393224, 0, 720901, 393224, 0, 524292, 393224, 0, 131084, 1310728, 2, 262159, 1179656, 0, 262162, 1179656, 0, 196631, 1048591, 5, 393241, 1179656, 0, 262172, 1179656, 0)
 
+[node name="player" parent="." instance=ExtResource("6_8hdiu")]
+position = Vector2(-164, 119)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-139, 2)
 polygon = PackedVector2Array(-109, -106, 368, -107, 369, 124, -2, 126, -2, 155, -43, 155, -44, 126, -126, 124, -126, -106, -117, -106, -117, -162, -157, -162, -157, 182, 427, 182, 427, -162, -109, -162)
 
-[node name="player" parent="." instance=ExtResource("6_8hdiu")]
-position = Vector2(-164, 119)
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(292, 3)
 
-[node name="worldTransitionPoint" type="Area2D" parent="."]
+[node name="desertExit" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="worldTransitionPoint"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="desertExit"]
 position = Vector2(-161, 144)
 shape = SubResource("RectangleShape2D_dhddn")
+
+[connection signal="body_entered" from="desertExit" to="." method="_on_desert_exit_body_entered"]
+[connection signal="body_exited" from="desertExit" to="." method="_on_desert_exit_body_exited"]
