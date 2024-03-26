@@ -10,11 +10,14 @@ var canTakeDamage = true
 
 func _physics_process(delta):
 	takingDamage()
+	updateHealth()
+	
 	
 	if playerChase:
 		position += (player.position - position).normalized()*speed*delta
 		move_and_collide(Vector2(0,0))
-		$AnimatedSprite2D.play("walk")
+		$AnimatedSprite2D.play("sideAttack")
+		
 		
 		if(player.position.x - position.x) < 0:
 			$AnimatedSprite2D.flip_h = true
@@ -50,6 +53,7 @@ func takingDamage():
 	if playerInAttackRange and global.playerCurrentAttack == true:
 		if canTakeDamage == true:
 			health = health - 20
+			$AnimatedSprite2D.play("sideAttack")
 			$recieveDamageCooldown.start()
 			canTakeDamage = false
 			print("goblin health:", health)
@@ -59,3 +63,12 @@ func takingDamage():
 
 func _on_recieve_damage_cooldown_timeout():
 	canTakeDamage = true
+
+func updateHealth():
+	var healthBar = $Healthbar
+	healthBar.value = health
+	
+	if health >= 100:
+		healthBar.visible = false
+	else:
+		healthBar.visible = true

@@ -150,7 +150,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"backAttack",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -173,7 +173,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"frontAttack",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -222,7 +222,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"sideAttack",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -265,8 +265,8 @@ script = ExtResource("1_apt3a")
 position = Vector2(0, -9.53674e-07)
 scale = Vector2(0.375, 0.354167)
 sprite_frames = SubResource("SpriteFrames_mx1kc")
-animation = &"frontAttack"
-frame_progress = 0.921839
+animation = &"sideAttack"
+frame_progress = 0.194883
 
 [node name="detectionArea" type="Area2D" parent="."]
 collision_layer = 2
@@ -287,6 +287,14 @@ shape = SubResource("CircleShape2D_d3r8y")
 
 [node name="recieveDamageCooldown" type="Timer" parent="."]
 wait_time = 0.75
+
+[node name="Healthbar" type="ProgressBar" parent="."]
+modulate = Color(0, 0.788235, 0, 1)
+offset_left = -9.0
+offset_top = 13.0
+offset_right = 171.0
+offset_bottom = 53.0
+scale = Vector2(0.1, 0.1)
 
 [connection signal="body_entered" from="detectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detectionArea" to="." method="_on_detection_area_body_exited"]

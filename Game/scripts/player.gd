@@ -16,6 +16,7 @@ func _physics_process(delta):
 	player_movement(delta)
 	enemyAttack()
 	attack()
+	updateHealth()
 	
 	if health <= 0:
 		playerAlive = false #add end screen/respawn/menu 
@@ -139,3 +140,21 @@ func currentCamera():
 	elif global.currentScene == "desert":
 		$worldCamera2D.enabled = false
 		$desertCamera2D.enabled = true
+
+func updateHealth():
+	var healthBar = $Healthbar
+	healthBar.value = health
+	
+	if health >= 200:
+		healthBar.visible = false
+	else:
+		healthBar.visible = true
+
+
+func _on_regeneration_timer_timeout():
+	if health < 200:
+		health = health + 15
+		if health > 200: 
+			health = 200
+	if health <= 0:
+		health = 0
