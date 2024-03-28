@@ -266,7 +266,9 @@ script = ExtResource("1_5uc1x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s7r2g")
-animation = &"idle"
+animation = &"death"
+frame = 3
+frame_progress = 0.151744
 
 [node name="detectionArea" type="Area2D" parent="."]
 
