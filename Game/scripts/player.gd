@@ -5,6 +5,8 @@ var current_direction = "name"
 
 var enemyInAttackRange = false
 var enemyAttackCooldown = true
+var bossInAttackRange = false
+var bossAttackCooldown = true
 var health = 200
 var playerAlive = true
 var attackInProgress = false
@@ -92,10 +94,14 @@ func player():
 func _on_player_hitbox_body_entered(body):
 	if body.has_method("enemy"):
 		enemyInAttackRange = true
+	if body.has_method("boss"):
+		bossInAttackRange = true
 
 func _on_player_hitbox_body_exited(body):
 	if body.has_method("enemy"):
 		enemyInAttackRange = false
+	if body.has_method("boss"):
+		bossInAttackRange = false
 
 func enemyAttack():
 	if enemyInAttackRange and enemyAttackCooldown == true:

@@ -60,8 +60,7 @@ func takingDamage():
 			canTakeDamage = false
 			print("boss health:", health)
 			if health <= 0:
-				$AnimatedSprite2D.play("death")
-				#self.queue_free()
+				self.queue_free()
 
 
 func _on_recieve_damage_cooldown_timeout():
