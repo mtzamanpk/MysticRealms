@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ff6kx3tj4na8"]
+[gd_scene load_steps=18 format=3 uid="uid://ff6kx3tj4na8"]
 
 [ext_resource type="Script" path="res://scripts/desert.gd" id="1_7k1nr"]
 [ext_resource type="Texture2D" uid="uid://c61oima320jid" path="res://art/tilesets/TilesetDesert.png" id="1_c53ei"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cs6jiik7vm326" path="res://art/tilesets/TilesetWater.png" id="5_5o6jk"]
 [ext_resource type="PackedScene" uid="uid://dju63x1ypl66o" path="res://scenes/player.tscn" id="6_8hdiu"]
 [ext_resource type="Texture2D" uid="uid://rutsmuo31d3s" path="res://art/tilesets/TilesetNature.png" id="7_glxly"]
+[ext_resource type="PackedScene" uid="uid://cikhxawgewx71" path="res://scenes/boss.tscn" id="9_fm8c0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_btmhb"]
 texture = ExtResource("1_c53ei")
@@ -3810,6 +3811,9 @@ polygon = PackedVector2Array(-109, -106, 368, -107, 369, 124, -2, 126, -2, 155, 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="desertExit"]
 position = Vector2(-161, 144)
 shape = SubResource("RectangleShape2D_dhddn")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("9_fm8c0")]
+position = Vector2(31, -1)
 
 [connection signal="body_entered" from="desertExit" to="." method="_on_desert_exit_body_entered"]
 [connection signal="body_exited" from="desertExit" to="." method="_on_desert_exit_body_exited"]
