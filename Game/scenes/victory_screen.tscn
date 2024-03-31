@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8p7nxsa6xg4r"]
+
+[ext_resource type="Script" path="res://VictoryScreen.gd" id="1_j5r2j"]
+
+[node name="VictoryScreen" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j5r2j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Victory! You've defeated the boss"
+
+[node name="MenuButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+text = "Return to Main Menu"
+
+[connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
