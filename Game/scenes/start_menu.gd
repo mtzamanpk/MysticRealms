@@ -5,4 +5,4 @@ func _on_start_game_pressed():
 
 
 func _on_quit_game_pressed():
-	get_tree().quit()
+	get_tree().quit() 
