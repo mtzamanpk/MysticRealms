@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ff6kx3tj4na8"]
+[gd_scene load_steps=19 format=3 uid="uid://ff6kx3tj4na8"]
 
 [ext_resource type="Script" path="res://scripts/desert.gd" id="1_7k1nr"]
 [ext_resource type="Texture2D" uid="uid://c61oima320jid" path="res://art/tilesets/TilesetDesert.png" id="1_c53ei"]
@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://cs6jiik7vm326" path="res://art/tilesets/TilesetWater.png" id="5_5o6jk"]
 [ext_resource type="PackedScene" uid="uid://dju63x1ypl66o" path="res://scenes/player.tscn" id="6_8hdiu"]
 [ext_resource type="Texture2D" uid="uid://rutsmuo31d3s" path="res://art/tilesets/TilesetNature.png" id="7_glxly"]
-[ext_resource type="PackedScene" path="res://scenes/boss.tscn" id="9_fm8c0"]
+[ext_resource type="PackedScene" uid="uid://dvi2m0t1u3qw8" path="res://scenes/boss.tscn" id="9_fm8c0"]
+[ext_resource type="PackedScene" uid="uid://b8p7nxsa6xg4r" path="res://scenes/victory_screen.tscn" id="10_sddsj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_btmhb"]
 texture = ExtResource("1_c53ei")
@@ -3814,6 +3815,9 @@ shape = SubResource("RectangleShape2D_dhddn")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("9_fm8c0")]
 position = Vector2(31, -1)
+
+[node name="VictoryScreen" parent="." instance=ExtResource("10_sddsj")]
+visible = false
 
 [connection signal="body_entered" from="desertExit" to="." method="_on_desert_exit_body_entered"]
 [connection signal="body_exited" from="desertExit" to="." method="_on_desert_exit_body_exited"]

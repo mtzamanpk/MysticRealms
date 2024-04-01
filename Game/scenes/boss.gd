@@ -61,6 +61,7 @@ func takingDamage():
 			print("boss health:", health)
 			if health <= 0:
 				self.queue_free()
+				Events.victoryScreen.emit()
 
 
 func _on_recieve_damage_cooldown_timeout():

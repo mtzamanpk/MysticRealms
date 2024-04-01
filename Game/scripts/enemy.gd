@@ -64,6 +64,8 @@ func takingDamage():
 func _on_recieve_damage_cooldown_timeout():
 	canTakeDamage = true
 
+
+
 func updateHealth():
 	var healthBar = $Healthbar
 	healthBar.value = health

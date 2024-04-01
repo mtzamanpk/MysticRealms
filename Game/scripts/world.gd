@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var victory_screen = $VictoryScreen
+@onready var coins_collected = $CanvasLayer/coinsCollected
 
 func _ready():
 	if global.gameFirstLoadIn == true:
@@ -9,14 +10,14 @@ func _ready():
 	else:
 		$player.position.x = global.playerExitDesertPosX
 		$player.position.y = global.playerExitDesertPosY
-	Events.victoryScreen.connect(showVictoryScreen)
+	Events.coinsCollected.connect(showCoinsCollected)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	change_scene()
 
-func showVictoryScreen():
-	victory_screen.show()
+func showCoinsCollected():
+	coins_collected.show()
 
 func _on_desert_transition_point_body_entered(body):
 	if body.has_method("player"):
