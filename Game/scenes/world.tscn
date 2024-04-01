@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://hdw20r5m2l8a"]
+[gd_scene load_steps=18 format=3 uid="uid://hdw20r5m2l8a"]
 
 [ext_resource type="PackedScene" uid="uid://dju63x1ypl66o" path="res://scenes/player.tscn" id="1_0xnny"]
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_2aq5u"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bcd4xy17wrgdo" path="res://art/tilesets/TilesetField.png" id="5_i1kgo"]
 [ext_resource type="Texture2D" uid="uid://rutsmuo31d3s" path="res://art/tilesets/TilesetNature.png" id="6_pae0v"]
 [ext_resource type="PackedScene" uid="uid://b2fajicolu3r7" path="res://scenes/enemy.tscn" id="7_7q6qi"]
+[ext_resource type="PackedScene" uid="uid://but3t3brh74h4" path="res://scenes/coin.tscn" id="9_jgemn"]
+[ext_resource type="PackedScene" uid="uid://b8p7nxsa6xg4r" path="res://scenes/victory_screen.tscn" id="9_ss6y5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjr1i"]
 texture = ExtResource("2_ihhxv")
@@ -2950,6 +2952,16 @@ position = Vector2(126, 29)
 
 [node name="enemy3" parent="." instance=ExtResource("7_7q6qi")]
 position = Vector2(-44, -65)
+
+[node name="Coin" parent="." instance=ExtResource("9_jgemn")]
+position = Vector2(-157, -23)
+
+[node name="VictoryScreen" parent="." instance=ExtResource("9_ss6y5")]
+visible = false
+offset_left = -128.5
+offset_top = -30.5
+offset_right = 128.5
+offset_bottom = 30.5
 
 [connection signal="body_entered" from="desertTransitionPoint" to="." method="_on_desert_transition_point_body_entered"]
 [connection signal="body_exited" from="desertTransitionPoint" to="." method="_on_desert_transition_point_body_exited"]

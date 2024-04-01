@@ -11,6 +11,7 @@ func _process(delta):
 	changeScenes()
 
 
+
 func _on_desert_exit_body_entered(body):
 	if body.has_method("player"):
 		global.transitionScene = true
