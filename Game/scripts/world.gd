@@ -22,7 +22,6 @@ func _on_desert_transition_point_body_entered(body):
 	if body.has_method("player"):
 		global.transitionScene = true
 
-
 func _on_desert_transition_point_body_exited(body):
 	if body.has_method("player"):
 		global.transitionScene = false
