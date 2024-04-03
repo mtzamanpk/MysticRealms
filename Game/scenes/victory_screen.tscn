@@ -15,7 +15,8 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Victory! You've defeated the boss"
+text = "Victory! You've defeated the boss!
+The Princess is Saved! "
 
 [node name="MenuButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
