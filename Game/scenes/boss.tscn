@@ -1,6 +1,6 @@
 [gd_scene load_steps=40 format=3 uid="uid://dvi2m0t1u3qw8"]
 
-[ext_resource type="Script" path="res://scenes/boss.gd" id="1_5uc1x"]
+[ext_resource type="Script" path="res://scripts/boss.gd" id="1_kkv4w"]
 [ext_resource type="Texture2D" uid="uid://c4tnua3nn1oqc" path="res://art/Dead.png" id="2_klmvg"]
 [ext_resource type="Texture2D" uid="uid://chcntghapu1qt" path="res://art/Warrior_Blue.png" id="3_xpssv"]
 
@@ -262,7 +262,7 @@ radius = 37.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 y_sort_enabled = true
-script = ExtResource("1_5uc1x")
+script = ExtResource("1_kkv4w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s7r2g")
