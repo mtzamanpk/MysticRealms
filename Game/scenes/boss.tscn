@@ -291,6 +291,7 @@ offset_left = -34.0
 offset_top = 33.0
 offset_right = 36.0
 offset_bottom = 60.0
+max_value = 200.0
 
 [node name="recieveDamageCooldown" type="Timer" parent="."]
 wait_time = 0.75

@@ -4,7 +4,7 @@ var speed = 15
 var playerChase = false
 var player = null
 
-var health = 100
+var health = 200
 var playerInAttackRange = false
 var canTakeDamage = true
 
@@ -71,7 +71,7 @@ func updateHealth():
 	var healthBar = $Healthbar
 	healthBar.value = health
 	
-	if health >= 100:
+	if health >= 200:
 		healthBar.visible = false
 	else:
 		healthBar.visible = true
