@@ -1,5 +1,8 @@
 extends CenterContainer
 
+func _ready():
+	RenderingServer.set_default_clear_color(Color.CORNFLOWER_BLUE)
+
 func _on_start_game_pressed():
 	get_tree().change_scene_to_file("res://scenes/world.tscn")
 
