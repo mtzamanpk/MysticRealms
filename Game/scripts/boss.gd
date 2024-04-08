@@ -54,7 +54,7 @@ func _on_hitbox_body_exited(body):
 func takingDamage():
 	if playerInAttackRange and global.playerCurrentAttack == true:
 		if canTakeDamage == true:
-			health = health - 20
+			health = health - 40
 			$AnimatedSprite2D.play("sideAttack")
 			$recieveDamageCooldown.start()
 			canTakeDamage = false
