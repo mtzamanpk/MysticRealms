@@ -17,6 +17,7 @@ func _ready():
 func _physics_process(delta):
 	player_movement(delta)
 	enemyAttack()
+	bossAttack()
 	attack()
 	updateHealth()
 	
@@ -111,8 +112,16 @@ func enemyAttack():
 		$attackCooldown.start()
 		print(health)
 
+func bossAttack():
+	if bossInAttackRange and bossAttackCooldown == true:
+		health = health -30
+		bossAttackCooldown = false
+		$attackCooldown.start()
+		print(health)
+
 func _on_attack_cooldown_timeout():
 	enemyAttackCooldown = true
+	bossAttackCooldown = true
 
 func attack():
 	var direction = current_direction

@@ -22,3 +22,5 @@ func finishSceneTransition():
 			currentScene = "desert"
 		else:
 			currentScene = "world"
+
+
