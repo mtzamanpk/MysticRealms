@@ -1,7 +1,24 @@
 [gd_scene load_steps=3 format=3 uid="uid://drhftjq50ihcu"]
 
 [ext_resource type="Texture2D" uid="uid://bstoxnco4nsql" path="res://art/Designer.png" id="1_cku6f"]
-[ext_resource type="Script" path="res://scenes/about.gd" id="1_k8s44"]
+
+[sub_resource type="GDScript" id="GDScript_go7te"]
+script/source = "extends CenterContainer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file(\"res://scenes/start_menu.tscn\")
+"
 
 [node name="about" type="CenterContainer"]
 anchors_preset = 15
@@ -9,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_k8s44")
+script = SubResource("GDScript_go7te")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.105882, 0.662745, 1, 1)
