@@ -51,5 +51,6 @@ layout_mode = 2
 text = "Quit Game"
 
 [connection signal="pressed" from="VBoxContainer/startGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/controlsButton" to="." method="_on_controls_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/aboutButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/quitGame" to="." method="_on_quit_game_pressed"]
