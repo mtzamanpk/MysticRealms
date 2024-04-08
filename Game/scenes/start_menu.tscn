@@ -37,10 +37,19 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Start Game"
 
+[node name="controlsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
+[node name="aboutButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "About"
+
 [node name="quitGame" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit Game"
 
 [connection signal="pressed" from="VBoxContainer/startGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/aboutButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/quitGame" to="." method="_on_quit_game_pressed"]

@@ -25,6 +25,7 @@ func _physics_process(delta):
 		health = 0
 		print("player has died")
 		self.queue_free()
+		get_tree().change_scene_to_file("res://scenes/death_scene.tscn")
 
 func player_movement(delta):
 	velocity = Vector2.ZERO
