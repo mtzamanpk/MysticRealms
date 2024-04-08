@@ -7,7 +7,7 @@ var enemyInAttackRange = false
 var enemyAttackCooldown = true
 var bossInAttackRange = false
 var bossAttackCooldown = true
-var health = 200
+var health = 125
 var playerAlive = true
 var attackInProgress = false
 
@@ -168,7 +168,7 @@ func updateHealth():
 
 
 func _on_regeneration_timer_timeout():
-	if health < 200:
+	if health < 125:
 		health = health + 15
 		if health > 200: 
 			health = 200
