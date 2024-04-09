@@ -38,10 +38,14 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Welcome to Mystic Realms
-To beat the game, there are 2 seperate endings:
+text = "Welcome to Mystic Realms!
+
+Goblins have taken the princess and its your job to save her.
+
+To save the princess , there are 2 seperate methods:
 Ending 1: Collect all the coins to gain enough money to save the princess 
 Ending 2: Defeat the boss to save the princess
+
 Good Luck"
 horizontal_alignment = 1
 
