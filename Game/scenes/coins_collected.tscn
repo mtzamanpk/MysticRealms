@@ -24,7 +24,10 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "All Coins Collected, Level Completed!"
+text = "All Coins Collected! 
+You can now pay off the
+goblins to return the princess!"
+horizontal_alignment = 1
 
 [node name="QuitGame" type="Button" parent="CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(64, 16)
