@@ -9,8 +9,8 @@ var transitionScene = false
 var playerExitDesertPosX = -198
 var playerExitDesertPosY = -74
 
-var playerStartPosX = -135
-var playerStartPosY = 23
+var playerStartPosX = 125
+var playerStartPosY = 116
 
 var gameFirstLoadIn = true
 
